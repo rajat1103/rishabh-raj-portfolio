@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#g)" />
+  <g fill="white" font-family="Arial, Helvetica, sans-serif">
+    <text x="50" y="90" font-size="64" font-weight="700">Cricket Score Predictor</text>
+    <text x="50" y="160" font-size="32" opacity=".9">Predict scores reliably using statistical formulas</text>
+  </g>
+</svg>

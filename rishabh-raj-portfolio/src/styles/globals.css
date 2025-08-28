@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Color variables for green themes */
+:root {
+  --surface: 236 253 245; /* emerald-50 */
+  --card: 209 250 229;    /* emerald-100 */
+  --accent: 16 185 129;   /* emerald-500 */
+  --mutegreen: 5 150 105; /* emerald-600 */
+  --ink: 2 44 34;         /* deep green */
+  --inkmute: 52 78 65;
+}
+
+.dark {
+  --surface: 3 18 14;     /* near black with green tint */
+  --card: 6 28 23;        /* dark green */
+  --accent: 52 211 153;   /* emerald-400 */
+  --mutegreen: 16 185 129;
+  --ink: 240 253 244;     /* text */
+  --inkmute: 187 247 208;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+/* Full-page grid background with soft green gradient */
+body {
+  background:
+    radial-gradient(1200px 600px at 70% -10%, rgba(16,185,129,.2), transparent 60%),
+    radial-gradient(800px 400px at -10% 20%, rgba(52,211,153,.15), transparent 60%),
+    linear-gradient(to bottom right, rgba(236,253,245,.6), rgba(209,250,229,.6)),
+    repeating-linear-gradient(0deg, rgba(16,185,129,.12) 0px, rgba(16,185,129,.12) 1px, transparent 1px, transparent 32px),
+    repeating-linear-gradient(90deg, rgba(16,185,129,.12) 0px, rgba(16,185,129,.12) 1px, transparent 1px, transparent 32px);
+  background-color: rgb(var(--surface));
+}
+
+/* Card styling */
+.card {
+  @apply bg-card/80 backdrop-blur-xl rounded-2xl shadow-soft border border-emerald-200/40 dark:border-emerald-900/40;
+}
+
+.section {
+  @apply max-w-6xl mx-auto px-6 md:px-10 py-16 md:py-24;
+}
+
+.badge {
+  @apply inline-flex items-center rounded-full border px-3 py-1 text-sm font-medium border-emerald-400/40 bg-emerald-50/70 dark:bg-emerald-900/30;
+}
+
+a.link {
+  @apply text-accent hover:underline underline-offset-4 decoration-2;
+}
